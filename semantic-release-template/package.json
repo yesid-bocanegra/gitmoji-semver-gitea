@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "dependencies": {},
   "devDependencies": {
-    "semantic-release": "^21.0.7",
+    "@saithodev/semantic-release-gitea": "^2.1.0",
     "semantic-release-gitmoji": "^1.6.4"
   }
 }

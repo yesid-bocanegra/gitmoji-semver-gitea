@@ -103,6 +103,6 @@ module.exports = {
     branches: semverObj.branches,
     plugins: [
         ['semantic-release-gitmoji', {releaseRules, releaseNotes}],
-        '@semantic-release/github'
+        '@saithodev/semantic-release-gitea'
     ]
 }
