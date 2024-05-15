@@ -18,8 +18,8 @@ const releaseRules = {
     patch: convert(semverObj.semver.patch)
 }
 
-function convert(arr){
-    const res=[]
+function convert(arr) {
+    const res = []
     for (const v of arr) {
         res.push(`:${v}:`)
     }
@@ -38,30 +38,30 @@ const releaseNotes = {
             return dateFormat(date, 'mmm dd')
         },
         releaseTypeText: function (type) {
-            if (type === 'major'){
+            if (type === 'major') {
                 return "Breaking Release!"
             }
-            if (type === 'minor'){
+            if (type === 'minor') {
                 return "Feature Release!"
             }
-            if (type === 'patch'){
+            if (type === 'patch') {
                 return "Fix Release"
             }
         },
         releaseTypeEmoji: function (type) {
-            if (type === 'major'){
+            if (type === 'major') {
                 return ":confetti_ball: "
             }
-            if (type === 'minor'){
+            if (type === 'minor') {
                 return ":star2: "
             }
-            if (type === 'patch'){
+            if (type === 'patch') {
                 return ""
             }
         },
         majorHeader: function (commits) {
             for (const gitmojiObj of gitmojisObj.gitmojis) {
-                if(gitmojiObj.emoji in commits && gitmojiObj.semver==='major'){
+                if (gitmojiObj.emoji in commits && gitmojiObj.semver === 'major') {
                     return "## Breaking Changes"
                 }
             }
@@ -69,7 +69,7 @@ const releaseNotes = {
         },
         minorHeader: function (commits) {
             for (const gitmojiObj of gitmojisObj.gitmojis) {
-                if(gitmojiObj.emoji in commits && gitmojiObj.semver==='minor'){
+                if (gitmojiObj.emoji in commits && gitmojiObj.semver === 'minor') {
                     return "## Features"
                 }
             }
@@ -77,7 +77,7 @@ const releaseNotes = {
         },
         patchHeader: function (commits) {
             for (const gitmojiObj of gitmojisObj.gitmojis) {
-                if(gitmojiObj.emoji in commits && gitmojiObj.semver==='patch'){
+                if (gitmojiObj.emoji in commits && gitmojiObj.semver === 'patch') {
                     return "## Fixes"
                 }
             }
@@ -85,7 +85,7 @@ const releaseNotes = {
         },
         noneHeader: function (commits) {
             for (const gitmojiObj of gitmojisObj.gitmojis) {
-                if(gitmojiObj.emoji in commits && gitmojiObj.semver==='none'){
+                if (gitmojiObj.emoji in commits && gitmojiObj.semver === 'none') {
                     return "## Miscellaneous"
                 }
             }
@@ -94,8 +94,8 @@ const releaseNotes = {
     },
     issueResolution: {
         template: '{baseUrl}/{owner}/{repo}/issues/{ref}',
-        baseUrl: 'https://github.com',
-        source: 'github.com'
+        baseUrl: 'https://code.ops.pcc.fyi',
+        source: 'code.ops.pcc.fyi'
     }
 }
 

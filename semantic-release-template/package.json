@@ -4,6 +4,6 @@
   "dependencies": {},
   "devDependencies": {
     "@saithodev/semantic-release-gitea": "^2.1.0",
-    "semantic-release-gitmoji": "^1.6.4"
+    "semantic-release-gitmoji": "^1.6.5"
   }
 }
