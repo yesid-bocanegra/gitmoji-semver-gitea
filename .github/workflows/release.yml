@@ -24,13 +24,13 @@ jobs:
           sudo pip install yq
           jq --version
           yq --version
-      - name: Install gitmoji-semver
+      - name: Install gitmoji-semver-gitea
         run: |
           git clone https://github.com/yesid-bocanegra/gitmoji-semver-gitea -b main
       - name: Generate semantic-release configs
-        working-directory: ./gitmoji-semver
+        working-directory: ./gitmoji-semver-gitea
         run: |
-          make scaffold F=./.semver.yml O=..
+          make scaffold F=../.semver.yml O=..
       - name: Release
         working-directory: ./.release
         env:
