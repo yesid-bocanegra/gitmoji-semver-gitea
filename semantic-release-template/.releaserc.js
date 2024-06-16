@@ -104,5 +104,6 @@ module.exports = {
     plugins: [
         ['semantic-release-gitmoji', {releaseRules, releaseNotes}],
         '@saithodev/semantic-release-gitea'
-    ]
+    ],
+    tagFormat: '${version}'
 }
