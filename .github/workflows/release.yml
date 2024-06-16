@@ -26,7 +26,7 @@ jobs:
           yq --version
       - name: Install gitmoji-semver
         run: |
-          git clone https://github.com/nkmr-jp/gitmoji-semver -b develop
+          git clone https://github.com/yesid-bocanegra/gitmoji-semver-gitea -b main
       - name: Generate semantic-release configs
         working-directory: ./gitmoji-semver
         run: |
